@@ -3,12 +3,12 @@
 #include <vector>
 
 //adicion de la librearia personalizada
-#include "AutoHomeLib.h"
+#include "AutoHomelib.h"
 
 using namespace std;
 
-int main(int    argc      //Numero de argumentos de entrada. El nombre del ejecutable cuenta como el primero
-        void**  argv)     //Array de argumentos de entrada
+int main(int    argc,      //Numero de argumentos de entrada. El nombre del ejecutable cuenta como el primero
+        char  **argv)     //Array de argumentos de entrada
 {
 
 
