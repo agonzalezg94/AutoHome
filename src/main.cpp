@@ -1,5 +1,7 @@
 #include <iostream>
 #include <sensor.h>
+#include <analogicSensor.h>
+#include <digitalSensor.h>
 #include <vector>
 
 //adicion de la librearia personalizada

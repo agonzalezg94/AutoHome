@@ -31,3 +31,16 @@ int average(int _iData, int _iSize)
   }
   return iAux;      //Devuelve la media calculada.
 };
+
+double LPF(double _dData,   //! Dato a filtrar
+          double dScope)    //! Filtrado
+{
+  static double dData_1=0.0;
+  double dFilter=0.0;
+
+  dFilter = (1.0-dScope)*_dData + dScope*dData_1;
+   //! Actualiza valor
+   dData_1 = _dData;
+
+   return dFilter;
+}
