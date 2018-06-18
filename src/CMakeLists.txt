@@ -1,4 +1,5 @@
-set(SOURCES main.cpp)
+set(SOURCES main.cpp
+            sensor.cpp)
 
 #Añade la librearia sampleLib.a al target
 add_library(AutoHomelib STATIC AutoHomelib.cpp)

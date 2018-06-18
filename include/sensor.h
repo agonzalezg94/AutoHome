@@ -7,6 +7,8 @@
 #ifndef SENSOR_H
 #define SENSOR_H
 
+#include <AutoHomelib.h>
+
 /**  Definicion de la clase sensor*/
 class Sensor
 {
@@ -22,13 +24,26 @@ protected:
     discretos devolverá valores true o false
     @param none
     @return Devuelve el valor del sensor. Si es analogico devuelveun integer. Si es discreto true o false*/
-    void getValue();
+    stSensorParams  stParameters;
+    //void getValue();
 /**Atributos publicos de la clase \class sensor*/
 public:
   //!<Constructor por defecto
   Sensor();
+  //!<Constructor con tipo de sensores
+  Sensor(stSensorParams _stParameters);
   //!<Destructor por defecto
   ~Sensor();
+  /** int checkOutOfRange(int _iValue, int _iMaxValue, int _iMinValue)
+    @param[in] _iValue : double : Valor a chequear
+    @param[in] _iMaxValue : int : Valor superior de la ventana de rango
+    @param[in] _iMinValue : int : Valor inferior de la ventana de rango
+    @return : int :
+      devuelve -1 si se encuentra fuera de rango
+      deveulve 0 si esta dentro de rango
+      */
+  int checkOutOfRange(int _iValue, int _iMaxValue, int _iMinValue);
+
 
 };
 
