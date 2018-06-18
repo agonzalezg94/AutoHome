@@ -32,8 +32,8 @@ int Sensor::checkOutOfRange(int _iValue,      //!<  Valor a chequear
                             int _iMaxValue,   //!<Valor limite maximo
                             int _iMinValue)   //!< Valor limite minimo
 {
-  if((_iValue > _iMaxValue) ||    //!< Mayor de valor maximo
-      (_iValue < _iMinValue))     //!< Menor de valor minimo
+  if((_iValue > _iMaxValue) ||                //!< Mayor de valor maximo
+      (_iValue < _iMinValue))                 //!< Menor de valor minimo
     return SENSOR_OUT_OF_RANGE;
   else
     return SENSOR_AVAILABLE;

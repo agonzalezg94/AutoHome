@@ -4,7 +4,7 @@
 buildDir=build/
 
 ##########  Ejecucion
-echo "Cambiando a directorio $buidDir"
+echo "Cambiando a directorio $builDir"
 cd $buildDir
 
 echo "Limpiando compilacion anterior..."
