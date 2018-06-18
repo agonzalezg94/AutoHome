@@ -1,0 +1,118 @@
+\hypertarget{classSensor}{}\section{Sensor Class Reference}
+\label{classSensor}\index{Sensor@{Sensor}}
+
+
+{\ttfamily \#include $<$sensor.\+h$>$}
+
+
+
+Inheritance diagram for Sensor\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSensor_a342d6d11ef572c8cba92cb76fb1a294b}{Sensor} ()
+\begin{DoxyCompactList}\small\item\em $<$Constructor por defecto \end{DoxyCompactList}\item 
+\hyperlink{classSensor_a852e9b06ce6e4a911105a8c388df1ce9}{Sensor} (st\+Sensor\+Params \+\_\+st\+Parameters)
+\begin{DoxyCompactList}\small\item\em Destructor por defecto. \end{DoxyCompactList}\item 
+int \hyperlink{classSensor_ab73adef0116c9ccc7c7fc67faf217ff6}{check\+Out\+Of\+Range} (int \+\_\+i\+Value, int \+\_\+i\+Max\+Value, int \+\_\+i\+Min\+Value)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+st\+Sensor\+Params \hyperlink{classSensor_aecbcb46558e78b3f9bb0db37c76ced6b}{st\+Parameters}
+\begin{DoxyCompactList}\small\item\em Medoto get\+Value(). Dicho metodo almacena la medida que esta tomando el \hyperlink{classSensor}{Sensor} Este será puramente virtual pues en los distintos sensores heredados tomará una forma En sensores analógicos devolvera un valor double o integer mientras que en los discretos devolverá valores true o false. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+! \$\+Author \$date \$revision\+Definicion de la clase sensor 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSensor_a342d6d11ef572c8cba92cb76fb1a294b}\label{classSensor_a342d6d11ef572c8cba92cb76fb1a294b}} 
+\index{Sensor@{Sensor}!Sensor@{Sensor}}
+\index{Sensor@{Sensor}!Sensor@{Sensor}}
+\subsubsection{\texorpdfstring{Sensor()}{Sensor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sensor\+::\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+$<$Constructor por defecto 
+
+$<$ Implementar aqui los metodos de las definiciones en \hyperlink{sensor_8h_source}{sensor.\+h}
+
+Constructor con tipo de sensores
+
+$<$ Constructor por defecto \mbox{\Hypertarget{classSensor_a852e9b06ce6e4a911105a8c388df1ce9}\label{classSensor_a852e9b06ce6e4a911105a8c388df1ce9}} 
+\index{Sensor@{Sensor}!Sensor@{Sensor}}
+\index{Sensor@{Sensor}!Sensor@{Sensor}}
+\subsubsection{\texorpdfstring{Sensor()}{Sensor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sensor\+::\+Sensor (\begin{DoxyParamCaption}\item[{st\+Sensor\+Params}]{\+\_\+st\+Parameters }\end{DoxyParamCaption})}
+
+
+
+Destructor por defecto. 
+
+Constructor \hyperlink{classSensor_a342d6d11ef572c8cba92cb76fb1a294b}{Sensor()} con tipo 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+by\+Type} & \+: B\+Y\+TE\+: tipo de sensor. puede ser discreto o analogico \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSensor_ab73adef0116c9ccc7c7fc67faf217ff6}\label{classSensor_ab73adef0116c9ccc7c7fc67faf217ff6}} 
+\index{Sensor@{Sensor}!check\+Out\+Of\+Range@{check\+Out\+Of\+Range}}
+\index{check\+Out\+Of\+Range@{check\+Out\+Of\+Range}!Sensor@{Sensor}}
+\subsubsection{\texorpdfstring{check\+Out\+Of\+Range()}{checkOutOfRange()}}
+{\footnotesize\ttfamily int Sensor\+::check\+Out\+Of\+Range (\begin{DoxyParamCaption}\item[{int}]{\+\_\+i\+Value,  }\item[{int}]{\+\_\+i\+Max\+Value,  }\item[{int}]{\+\_\+i\+Min\+Value }\end{DoxyParamCaption})}
+
+int \hyperlink{classSensor_ab73adef0116c9ccc7c7fc67faf217ff6}{check\+Out\+Of\+Range(int \+\_\+i\+Value, int \+\_\+i\+Max\+Value, int \+\_\+i\+Min\+Value)} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+i\+Value} & \+: double \+: Valor a chequear \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+i\+Max\+Value} & \+: int \+: Valor superior de la ventana de rango \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+i\+Min\+Value} & \+: int \+: Valor inferior de la ventana de rango \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: int \+: devuelve -\/1 si se encuentra fuera de rango deveulve 0 si esta dentro de rango 
+\end{DoxyReturn}
+$<$ Mayor de valor maximo
+
+$<$ Menor de valor minimo 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+i\+Value} & Valor a chequear \\
+\hline
+{\em \+\_\+i\+Max\+Value} & Valor limite maximo \\
+\hline
+{\em \+\_\+i\+Min\+Value} & Valor limite minimo \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classSensor_aecbcb46558e78b3f9bb0db37c76ced6b}\label{classSensor_aecbcb46558e78b3f9bb0db37c76ced6b}} 
+\index{Sensor@{Sensor}!st\+Parameters@{st\+Parameters}}
+\index{st\+Parameters@{st\+Parameters}!Sensor@{Sensor}}
+\subsubsection{\texorpdfstring{st\+Parameters}{stParameters}}
+{\footnotesize\ttfamily st\+Sensor\+Params Sensor\+::st\+Parameters\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Medoto get\+Value(). Dicho metodo almacena la medida que esta tomando el \hyperlink{classSensor}{Sensor} Este será puramente virtual pues en los distintos sensores heredados tomará una forma En sensores analógicos devolvera un valor double o integer mientras que en los discretos devolverá valores true o false. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve el valor del sensor. Si es analogico devuelveun integer. Si es discreto true o false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/sensor.\+h\item 
+src/sensor.\+cpp\end{DoxyCompactItemize}
