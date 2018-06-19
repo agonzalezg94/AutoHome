@@ -9,18 +9,26 @@
 Sensor::Sensor()
 {
   this->stParameters.byType   = SENSOR_TYPE_UNKNOW;
-  this->stParameters.dScope   = NOT_DOUBLE_NUMBER;
-  this->stParameters.dOffset  = NOT_DOUBLE_NUMBER;
+  this->stParameters.flScope   = NOT_FLOAT_NUMBER;
+  this->stParameters.flOffset  = NOT_FLOAT_NUMBER;
 }
 
 /** Constructor Sensor() con tipo
     @param[in]  _byType : BYTE: tipo de sensor. puede ser discreto o analogico
 */
-Sensor::Sensor(stSensorParams _stParameters)
+Sensor::Sensor(stSensorParameters _stParameters)
 {
   this->stParameters.byType  = _stParameters.byType;
-  this->stParameters.dScope  = _stParameters.dScope;
-  this->stParameters.dOffset = _stParameters.dOffset;
+  this->stParameters.flScope  = _stParameters.flScope;
+  this->stParameters.flOffset = _stParameters.flOffset;
+}
+
+Sensor::Sensor(BYTE _byType)
+{
+  this->stParameters.byType  = _byType;
+  this->stParameters.flScope   = NOT_FLOAT_NUMBER;
+  this->stParameters.flOffset  = NOT_FLOAT_NUMBER;
+
 }
 
 Sensor::~Sensor()

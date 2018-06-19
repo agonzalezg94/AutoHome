@@ -6,8 +6,13 @@
 #ifndef AUTOHOMELIB_H
 #define AUTOHOMELIB_H
 #include <vector>
+#include <string>
+#include <iostream>
+
+using namespace std;
 
 int average(int _iData, int _iSize);
+float LPF(float _flData, float _flScope);
 
 //!< Variable tipo byte. 0x00-0xFF
 typedef unsigned short BYTE;
@@ -22,8 +27,8 @@ typedef unsigned long WORD;
 #define NOT_BYTE_NUMBER       0xFF
 #define NOT_WORD_NUMBER       0xFFFF
 #define NOT_INT_NUMBER        0xFFFF
-#define NOT_DWORD_NUMBER      0xFFFFFFFF
-#define NOT_DOUBLE_NUMBER     0xFFFFFFFF
+#define NOT_DWORD_NUMBER      0xFFFF
+#define NOT_FLOAT_NUMBER      6535.0
 
 //!< Errores
 #define SENSOR_OUT_OF_RANGE   -1
@@ -33,14 +38,14 @@ typedef unsigned long WORD;
 
 /**  Estructura de paramatros del sensor.
   @param  byType : BYTE
-  @param  dScope : double : pendiente del escalado del sensor. Escalado en y
-  @param  dOffset : double : offset en x del escalado del sensor.
+  @param  fScope : float : pendiente del escalado del sensor. Escalado en y
+  @param  fOffset : float : offset en x del escalado del sensor.
 */
 typedef struct
 {
   BYTE byType;
-  double  dScope;
-  double  dOffset;
-}stSensorParams;
+  float  flScope;
+  float  flOffset;
+}stSensorParameters;
 
 #endif //AUTOHOMELIB_H

@@ -1,6 +1,7 @@
 set(SOURCES main.cpp
-            sensor.cpp)
-
+            sensor.cpp
+            analogicSensor.cpp
+            digitalSensor.cpp)
 #Añade la librearia sampleLib.a al target
 add_library(AutoHomelib STATIC AutoHomelib.cpp)
 

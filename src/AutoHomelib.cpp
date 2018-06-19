@@ -28,19 +28,20 @@ int average(int _iData, int _iSize)
     //Buscar la manera de desalojar el primer espacio del contenedor
     // y aplicar el siguiente (FIFO)
     //Buscar la solucion aqui
+    //TODO
   }
   return iAux;      //Devuelve la media calculada.
 };
 
-double LPF(double _dData,   //! Dato a filtrar
-          double dScope)    //! Filtrado
+float LPF(float _flData,   //! Dato a filtrar
+          float _flScope)    //! Filtrado
 {
-  static double dData_1=0.0;
-  double dFilter=0.0;
+  static float flData_1=0.0;
+  float flFilter=0.0;
 
-  dFilter = (1.0-dScope)*_dData + dScope*dData_1;
+  flFilter = (1.0-_flScope)*_flData + _flScope*flData_1;
    //! Actualiza valor
-   dData_1 = _dData;
+   flData_1 = _flData;
 
-   return dFilter;
+   return flFilter;
 }
